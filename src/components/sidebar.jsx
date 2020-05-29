@@ -32,7 +32,7 @@ export default class Sidebar extends Component {
                 <li><a href="https://github.com/Dhruv34788" target="_blank" rel="noopener noreferrer"><i className="icon-github"></i></a></li>
                 <li><a href="https://medium.com/@dhruv.barochia34788" target="_blank" rel="noopener noreferrer"><i className="icon-blogger2"></i></a></li>
               </ul>
-                </nav>*/ }
+                </nav>
             <div className="colorlib-footer">
               <p><small>
                   Made with <i className="icon-heart" aria-hidden="true" /> and <i className="icon-beer" aria-hidden="true"></i><br></br>
@@ -41,7 +41,7 @@ export default class Sidebar extends Component {
               <p><small>
                 Something coming soon !!
               </small></p>
-            </div>
+            </div>*/ }
           </aside>
         </div>
       </div>
