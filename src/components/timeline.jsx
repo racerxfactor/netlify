@@ -44,7 +44,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2>Career Break<span>2020-2021</span></h2>
-                        <p>This was the year of the pandemic. It sucked</p> 
+                        <p>This was the year of the pandemic. It sucked. We all know it</p> 
                       </div>
                     </div>
                   </article>
