@@ -305,6 +305,11 @@
 		stickyFunction();
 		owlCrouselFeatureSlide();
 	});
-
-
+//added 4.4.24 il8n kill
+	i18n.init({
+		resources,
+		debug: false, // It should be false
+		lng: 'en',
+		fallbackLng: 'en',
+	  });
 }());
