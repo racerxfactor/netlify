@@ -1,100 +1,42 @@
-# Portfolio Template
+![MacBook Air - 2 (3)](https://user-images.githubusercontent.com/75136330/203812467-8b00176d-9d31-4c09-86c0-8b82b8c661eb.png)
+![127 0 0 1_5173_ (1)](https://user-images.githubusercontent.com/75136330/203812531-baeb4957-5c7d-4222-a07a-2805b278bdbf.png)
 
-https://github.com/shaqdeff/Portfolio-Template/assets/92020713/eed76a82-e59d-440b-a04c-a2dc00a508b7
+# React Portfolio 2
+### Vite + React + tailwind
 
-![portfolio-phone](https://github.com/shaqdeff/Portfolio-Template/assets/92020713/e41ed31c-50e5-40d3-a74f-9c0eb053fe7f)
-![portfolio-phone-3](https://github.com/shaqdeff/Portfolio-Template/assets/92020713/e8c23aa7-ac27-48fc-bf66-50ab00e3a64f)
-
-I created this portfolio to use as my own but ended up doing something else entirely. However, instead of keeping it buried, I decided to put it up here on GitHub as an open-source resource to help individuals to learn, adapt, and create their own portfolios. Feel free to customize and modify the theme and components to suit your personal style and branding preferences.
-
-## License and Attribution
-
-The code in this repository is released under the [MIT](https://github.com/shaqdeff/Portfolio-Template/blob/90213d4887074d1d29434f706afad3d12fa33f5f/MIT.md) License, which grants you the freedom to use, modify, and distribute the template as your own. However, if you choose to use the site's design largely unmodified, kindly credit me as the original designer of the site.
-
-All projects and experiences included in this portfolio are the result of my own efforts and creativity. Please refrain from presenting them as your own.
-
-## Built With
-
-- React.js
-- Three.js
-- Framer Motion
-- TailwindCSS
-
-## Live Demo
-
-- Click [here](https://shaq-portfolio.netlify.app/) to view the live demo.
-
-## Getting Started
-
-To get started with this portfolio template, follow these simple steps:
-
-### Prerequisites
-
-Make sure you have node `16.0.0` or higher and npm `9.0.0` or higher installed.
-
-### Setup
-
-- With git, clone the code to your machine, or download a ZIP of all the files directly.
-- [Download the ZIP file from this location](https://github.com/shaqdeff/Portfolio-Template/archive/refs/heads/main.zip) or run the following [git](https://git-scm.com/) command to clone the files to your machine:
-
-```
-git clone https://github.com/shaqdeff/Portfolio-Template.git
-```
-
-- Once the files are on your machine, open the **Portfolio-Template** folder in [Visual Studio Code](https://code.visualstudio.com/download).
-
-```
-cd Portfolio-Template && code .
-```
-
-## Install
-
-- After opening the files in Visual Studio Code, open the **VS Code** integrated terminal and run the following commands:
-
-```
-npm install
-```
-
-This will install all the packages and dependencies used in the project.
-
-## Usage
-
-- Run the following command to start a local server:
-
-```
+```bash 
+npm i
 npm run dev
 ```
+## You Learn:
++ react js hooks
++ folder structure
++ tailwind css
++ swiper js
++ react icons
++ react js packages (ex:react-modal)
++ email js
++ aos scroll animation
++ and more....
 
-This will open up the project on a browser on `http://localhost:5173/`
+## youtube video link
+[Watch now](https://youtu.be/YpFK4hUZ-NM)
 
-## Build
+## live preview link
+[See Now](https://codeaprogram-portfolio.web.app/)
 
-- To create a production build:
+## Startup repository link
+[Repository](https://github.com/Sridhar-C-25/React_portfolio_2_startup)
 
-```
-npm run build
-```
+## packages:
++ [tailwind css](https://tailwindcss.com/docs/installation)
++ [vite js](https://vitejs.dev/guide/)
++ [swiper js](https://swiperjs.com/get-started)
++ [email js](https://www.emailjs.com/docs/)
++ [Aos (animation)](https://michalsnik.github.io/aos/)
++ [react modal](https://www.npmjs.com/package/react-modal)
++ [react-hot-toast](https://react-hot-toast.com/docs)
++ [react icons](https://react-icons.github.io/react-icons/)
 
-- To preview the site as it will appear once deployed:
 
-```
-npm run preview
-```
 
-## Authors
-
-👤 **Shaquille Ndunda**
-
-- GitHub: [@shaqdeff](https://github.com/shaqdeff)
-- Twitter: [@shaquillendunda](https://twitter.com/shaquillendunda)
-- LinkedIn: [Shaquille Ndunda](https://www.linkedin.com/in/shaquille-ndunda-b13a95107/)
-
-## Feedback and Contributions
-
-If you have any feedback, suggestions, or would like to contribute to this project, your involvement is highly valued. Feel free to open an [issue](../../issues/) or submit a pull request with your ideas and enhancements. Remember, this template is a starting point, and the true magic lies in making it your own. Enjoy the journey of creating a stunning portfolio that represents your unique talents and accomplishments!
-
-Happy coding and showcasing!
-
-## Show your support
-
-Give a ⭐️ if you like this project!

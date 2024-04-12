@@ -1,47 +1,40 @@
-import { BrowserRouter } from 'react-router-dom';
-import {
-  About,
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  Tech,
-  Projects,
-} from './components';
+// import components
+import Hero from "./components/Hero";
+import Navbar from "./Layouts/Navbar";
+import Skills from "./components/Skills";
+import Service from "./components/Services";
+import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonials";
+import Hireme from "./components/Hireme";
+import Contact from "./components/Contact";
+import { useEffect } from "react";
+// Animation package
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1800,
+      offset: 100,
+      disable: "mobile",
+    });
+  }, []);
   return (
-    <BrowserRouter>
-      <div className="relative z-0">
-        <div>
-          <Navbar />
-          <Hero />
-        </div>
-
-        <div className="bg-about bg-cover bg-center bg-no-repeat">
-          <About />
-        </div>
-
-        <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
-          <Tech />
-        </div>
-
-        <Projects />
-
-        <div
-          className="bg-experience bg-cover bg-center bg-no-repeat 
-            rounded-tl-[150px] rounded-br-[150px]">
-          <div
-            className="bg-experienceLight bg-cover bg-center 
-            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
-            <Experience />
-          </div>
-        </div>
-        <div className="relative z-0">
-          <Contact />
-        </div>
-      </div>
-    </BrowserRouter>
+    <div className="">
+      <Navbar />
+      <Hero />
+      <Skills />
+      <Service />
+      <Projects />
+      <Testimonials />
+      <Hireme />
+      <Contact />
+      <footer className="p-3 text-center">
+        <h6 className="mb-3">JOHN ALEX</h6>
+        <p>codeaprogram © All CopyRights Reserved 2022</p>
+      </footer>
+    </div>
   );
 };
 
