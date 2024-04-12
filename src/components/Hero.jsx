@@ -1,97 +1,57 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { shaq, bwmap, worldmap } from '../assets';
-
+// import content
+import { useEffect } from "react";
+import { content } from "../Content";
 const Hero = () => {
+  const { hero } = content;
+
   return (
-    <>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={bwmap}
-          alt="world map"
-          className="w-full h-full sm:block hidden object-cover"
-        />
-      </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={worldmap}
-          alt="world map"
-          className="w-full h-full sm:hidden block object-cover"
-        />
-      </div>
-      <section
-        className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
-        sm:bg-hero bg-hero-mobile overflow-hidden">
+    <section id="home" className="overflow-hidden">
+      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <div
-          className={`absolute inset-0 sm:top-[250px] top-[150px] 
-          lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
-          max-w-7xl mx-auto flex flex-row items-start
-          justify-between gap-3`}>
-          <div className="flex flex-col justify-center items-center mt-5 ml-3">
-            <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
-            <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
-          </div>
-
-          <div>
-            <h1
-              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}>
-              Hi, I'm{' '}
-              <span
-                className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
-                font-extrabold uppercase">
-                Shaquille
-              </span>
-            </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
-              consectetur adipisicing elit deleniti, voluptas.
-            </p>
-          </div>
-          <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"></div>
-
-          <div></div>
+          data-aos="slide-left"
+          data-aos-delay="1200"
+          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
+        >
+          <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
+            {hero.firstName}{" "}
+            <span className="text-dark_primary">{hero.LastName}</span>
+          </h1>
         </div>
 
-        <div
-          className="absolute xs:bottom-10 bottom-32 w-full 
-          flex justify-center items-center">
-          <a href="#about">
-            <div
-              className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french border-dim flex
-            justify-center items-start p-2">
-              <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
-              />
-            </div>
-          </a>
+        {/* first col */}
+        <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+          <h2>{hero.title}</h2>
+          <br />
+          <div className="flex justify-end">
+            <button className="btn">{hero.btnText}</button>
+          </div>
+          <div className="flex flex-col gap-10 mt-10">
+            {hero.hero_content.map((content, i) => (
+              <div
+                key={i}
+                data-aos="fade-down"
+                data-aos-delay={i * 300}
+                className={`flex items-center w-80 gap-5
+            ${i === 1 && " flex-row-reverse text-right"}  `}
+              >
+                <h3>{content.count}</h3>
+                <p>{content.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
-        <div>
+        {/* sec col */}
+        <div className="md:h-[37rem] h-96">
           <img
-            className="absolute bottom-0 ml-[50vw] 
-            lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={shaq}
-            alt="shaquille"
+            src={hero.image}
+            data-aos="slide-up"
+            alt="..."
+            className="h-full object-cover"
           />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
