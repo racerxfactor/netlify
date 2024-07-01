@@ -3,7 +3,85 @@ import React from 'react';
 class App extends React.Component {
   render() {
     return (
-      <div>simon, helloworld!!!</div>
+      <div className="Hero1" style={{width: 1440, height: 1998, paddingBottom: 160, background: 'white', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 160, display: 'inline-flex'}}>
+  <div className="Header1" style={{width: 1440, height: 72, paddingLeft: 98, paddingRight: 98, paddingTop: 8, paddingBottom: 8, background: 'white', borderBottom: '1px #DEE5ED solid', justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex'}}>
+    <div className="Group" style={{width: 90, height: 38, position: 'relative'}}>
+      <div className="Vector" style={{width: 40, height: 23, left: 0, top: 0, position: 'absolute', background: '#CED7E4'}}></div>
+      <div className="Rectangle" style={{width: 36, height: 12, left: 2, top: 26, position: 'absolute', background: '#CED7E4', borderRadius: 9}} />
+      <div className="Logo" style={{left: 49, top: 9, position: 'absolute', color: '#7B95B7', fontSize: 20, fontFamily: 'DM Sans', fontWeight: '700', lineHeight: 24, letterSpacing: 0.15, wordWrap: 'break-word'}}>logo</div>
+    </div>
+    <div className="AutoLayoutHorizontal" style={{justifyContent: 'flex-start', alignItems: 'center', gap: 48, display: 'flex'}}>
+      <div className="Home" style={{textAlign: 'center', color: '#486284', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>Home</div>
+      <div className="AboutUs" style={{textAlign: 'center', color: '#486284', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>About Us</div>
+      <div className="Contact" style={{textAlign: 'center', color: '#486284', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>Contact</div>
+      <div className="StyleFilled" style={{paddingLeft: 20, paddingRight: 20, paddingTop: 12, paddingBottom: 12, background: '#486284', borderRadius: 50, overflow: 'hidden', border: '1px #486284 solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+        <div className="DoSomething" style={{color: 'white', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>Order now</div>
+      </div>
+    </div>
+  </div>
+  <div className="AutoLayoutHorizontal" style={{width: 1216, justifyContent: 'flex-start', alignItems: 'center', gap: 31, display: 'inline-flex'}}>
+    <div className="AutoLayoutVertical" style={{width: 612, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
+      <div className="AutoLayoutVertical" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'flex'}}>
+        <div className="AutoLayoutVertical" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 8, display: 'flex'}}>
+          <div className="LabelGoesHere" style={{width: 612, color: '#486284', fontSize: 21, fontFamily: 'DM Sans', fontWeight: '500', lineHeight: 22, letterSpacing: 0.15, wordWrap: 'break-word'}}>Label goes here</div>
+          <div className="LoremIpsumSimply" style={{width: 612, color: '#486284', fontSize: 60, fontFamily: 'DM Sans', fontWeight: '700', lineHeight: 76, letterSpacing: 0.50, wordWrap: 'break-word'}}>Lorem Ipsum simply </div>
+        </div>
+        <div className="WelcomeToBurgerBlissWhereWeTakeYourCravingsToAWholeNewLevelOurMouthwateringBurgersAreMadeFrom100BeefAndAreServedOnFreshlyBakedBuns" style={{width: 612, color: '#8CA2C0', fontSize: 20, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 32, letterSpacing: 0.50, wordWrap: 'break-word'}}>Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are made from 100% beef and are served on freshly baked buns. </div>
+      </div>
+      <div className="StyleOutlined" style={{paddingLeft: 20, paddingRight: 20, paddingTop: 12, paddingBottom: 12, borderRadius: 50, overflow: 'hidden', border: '1px #486284 solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+        <div className="DoSomething" style={{color: '#486284', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>Explore</div>
+      </div>
+    </div>
+    <div className="PlaceholderImage" style={{flex: '1 1 0', alignSelf: 'stretch', padding: 10, background: '#EFF2F6', borderRadius: 24, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+      <div className="Vector" style={{width: 96, height: 96, background: '#9CB0C9'}}></div>
+    </div>
+  </div>
+  <div className="ContentSection1" style={{height: 1156, paddingLeft: 112, paddingRight: 112, paddingTop: 120, paddingBottom: 120, background: 'white', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', gap: 64, display: 'flex'}}>
+    <div className="LoremIpsumIsSimplyDummy" style={{alignSelf: 'stretch', color: '#486284', fontSize: 60, fontFamily: 'DM Sans', fontWeight: '700', lineHeight: 76, letterSpacing: 0.50, wordWrap: 'break-word'}}>Lorem Ipsum is simply dummy</div>
+    <div className="AutoLayoutHorizontal" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 64, display: 'inline-flex'}}>
+      <div className="AutoLayoutVertical" style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
+        <div className="AutoLayoutVertical" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'flex'}}>
+          <div className="LoremIpsumIsSimplyDummy" style={{width: 612, color: '#486284', fontSize: 28, fontFamily: 'DM Sans', fontWeight: '500', lineHeight: 32, wordWrap: 'break-word'}}>Lorem Ipsum is simply dummy</div>
+          <div className="WelcomeToBurgerBlissWhereWeTakeYourCravingsToAWholeNewLevelOurMouthwateringBurgersAreMadeFrom100BeefAndAreServedOnFreshlyBakedBuns" style={{width: 612, color: '#8CA2C0', fontSize: 20, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 32, letterSpacing: 0.50, wordWrap: 'break-word'}}>Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are made from 100% beef and are served on freshly baked buns.</div>
+        </div>
+        <div className="StyleOutlined" style={{paddingLeft: 20, paddingRight: 20, paddingTop: 12, paddingBottom: 12, borderRadius: 50, overflow: 'hidden', border: '1px #486284 solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+          <div className="DoSomething" style={{color: '#486284', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>Do something</div>
+        </div>
+      </div>
+      <div className="PlaceholderImage" style={{flex: '1 1 0', alignSelf: 'stretch', padding: 10, background: '#EFF2F6', borderRadius: 24, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+        <div className="Vector" style={{width: 96, height: 96, background: '#9CB0C9'}}></div>
+      </div>
+    </div>
+    <div className="AutoLayoutHorizontal" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 64, display: 'inline-flex'}}>
+      <div className="AutoLayoutVertical" style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
+        <div className="AutoLayoutVertical" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'flex'}}>
+          <div className="LoremIpsumIsSimplyDummy" style={{width: 612, color: '#486284', fontSize: 28, fontFamily: 'DM Sans', fontWeight: '500', lineHeight: 32, wordWrap: 'break-word'}}>Lorem Ipsum is simply dummy</div>
+          <div className="WelcomeToBurgerBlissWhereWeTakeYourCravingsToAWholeNewLevelOurMouthwateringBurgersAreMadeFrom100BeefAndAreServedOnFreshlyBakedBuns" style={{width: 612, color: '#8CA2C0', fontSize: 20, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 32, letterSpacing: 0.50, wordWrap: 'break-word'}}>Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are made from 100% beef and are served on freshly baked buns.</div>
+        </div>
+        <div className="StyleOutlined" style={{paddingLeft: 20, paddingRight: 20, paddingTop: 12, paddingBottom: 12, borderRadius: 50, overflow: 'hidden', border: '1px #486284 solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+          <div className="DoSomething" style={{color: '#486284', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>Do something</div>
+        </div>
+      </div>
+      <div className="PlaceholderImage" style={{flex: '1 1 0', alignSelf: 'stretch', padding: 10, background: '#EFF2F6', borderRadius: 24, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+        <div className="Vector" style={{width: 96, height: 96, background: '#9CB0C9'}}></div>
+      </div>
+    </div>
+    <div className="AutoLayoutHorizontal" style={{alignSelf: 'stretch', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 64, display: 'inline-flex'}}>
+      <div className="AutoLayoutVertical" style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 24, display: 'inline-flex'}}>
+        <div className="AutoLayoutVertical" style={{flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'flex'}}>
+          <div className="LoremIpsumIsSimplyDummy" style={{width: 612, color: '#486284', fontSize: 28, fontFamily: 'DM Sans', fontWeight: '500', lineHeight: 32, wordWrap: 'break-word'}}>Lorem Ipsum is simply dummy</div>
+          <div className="WelcomeToBurgerBlissWhereWeTakeYourCravingsToAWholeNewLevelOurMouthwateringBurgersAreMadeFrom100BeefAndAreServedOnFreshlyBakedBuns" style={{width: 612, color: '#8CA2C0', fontSize: 20, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 32, letterSpacing: 0.50, wordWrap: 'break-word'}}>Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are made from 100% beef and are served on freshly baked buns.</div>
+        </div>
+        <div className="StyleOutlined" style={{paddingLeft: 20, paddingRight: 20, paddingTop: 12, paddingBottom: 12, borderRadius: 50, overflow: 'hidden', border: '1px #486284 solid', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+          <div className="DoSomething" style={{color: '#486284', fontSize: 16, fontFamily: 'DM Sans', fontWeight: '400', lineHeight: 24, letterSpacing: 0.50, wordWrap: 'break-word'}}>Do something</div>
+        </div>
+      </div>
+      <div className="PlaceholderImage" style={{flex: '1 1 0', alignSelf: 'stretch', padding: 10, background: '#EFF2F6', borderRadius: 24, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+        <div className="Vector" style={{width: 96, height: 96, background: '#9CB0C9'}}></div>
+      </div>
+    </div>
+  </div>
+</div>
     );
   }
 }
