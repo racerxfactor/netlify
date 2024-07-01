@@ -1,42 +1,106 @@
-![MacBook Air - 2 (3)](https://user-images.githubusercontent.com/75136330/203812467-8b00176d-9d31-4c09-86c0-8b82b8c661eb.png)
-![127 0 0 1_5173_ (1)](https://user-images.githubusercontent.com/75136330/203812531-baeb4957-5c7d-4222-a07a-2805b278bdbf.png)
+# react.js hello world
+---
+first, you should install node and npm.
 
-# React Portfolio 2
-### Vite + React + tailwind
+1. create directory  
+    `mkdir helloworld && cd helloworld`
 
-```bash 
-npm i
-npm run dev
+2. init npm  
+    `npm init`
+
+3. install webpack and webpack-dev-server  
+    `npm install webpack webpack-dev-server --save`
+
+4. install react and react-dom  
+    `npm install react react-dom --save`
+
+5. install babel etc.  
+    `npm install babel-core babel-loader babel-preset-react babel-preset-es2015 --save`
+
+6. add start scripts to package.json
+```javascript
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "webpack-dev-server --hot"
+    }
 ```
-## You Learn:
-+ react js hooks
-+ folder structure
-+ tailwind css
-+ swiper js
-+ react icons
-+ react js packages (ex:react-modal)
-+ email js
-+ aos scroll animation
-+ and more....
 
-## youtube video link
-[Watch now](https://youtu.be/YpFK4hUZ-NM)
+7. touch webpack.config.js
+```javascript
+    var config = {
+      entry: './main.js',
 
-## live preview link
-[See Now](https://codeaprogram-portfolio.web.app/)
+      output: {
+        path: './',
+        filename: 'index.js'
+      },
 
-## Startup repository link
-[Repository](https://github.com/Sridhar-C-25/React_portfolio_2_startup)
+      devServer: {
+        inline: true,
+        port: 7777
+      },
 
-## packages:
-+ [tailwind css](https://tailwindcss.com/docs/installation)
-+ [vite js](https://vitejs.dev/guide/)
-+ [swiper js](https://swiperjs.com/get-started)
-+ [email js](https://www.emailjs.com/docs/)
-+ [Aos (animation)](https://michalsnik.github.io/aos/)
-+ [react modal](https://www.npmjs.com/package/react-modal)
-+ [react-hot-toast](https://react-hot-toast.com/docs)
-+ [react icons](https://react-icons.github.io/react-icons/)
+      module: {
+        loaders: [
+          {
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'babel',
+            query: {
+              presets: ['es2015', 'react']
+            }
+          }
+        ]
+      }
+    }
 
+    module.exports = config;
+```
 
+8. touch index.html
+```html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>react helloworld</title>
+      </head>
+      <body>
+        <div id="app"></div>
+        <script src="index.js" charset="utf-8"></script>
+      </body>
+    </html>
+```
 
+9. touch App.jsx
+```javascript
+    import React from 'react';
+
+    class App extends React.Component {
+      render() {
+        return (
+          <div>simon, helloworld!!!</div>
+        );
+      }
+    }
+
+    export default App;
+```
+
+10. touch main.js
+```javascript
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+
+    import App from './App.jsx';
+
+    ReactDOM.render(<App />, document.getElementById('app'));
+```
+
+11. start server  
+    `npm start`
+
+12. open browser: [http://localhost:7777](http://localhost:7777)
+
+---
+if you clone this repository to local, just `npm install` and `npm start`.
