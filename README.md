@@ -1,106 +1,65 @@
-# react.js hello world
----
-first, you should install node and npm.
+# Bulletproof React 🛡️ ⚛️
 
-1. create directory  
-    `mkdir helloworld && cd helloworld`
+[![MIT License](https://img.shields.io/github/license/alan2207/bulletproof-react)](https://github.com/alan2207/bulletproof-react/blob/master/LICENSE)
+[![CI](https://github.com/alan2207/bulletproof-react/actions/workflows/ci.yml/badge.svg)](https://github.com/alan2207/bulletproof-react/actions/workflows/ci.yml)
 
-2. init npm  
-    `npm init`
+A simple, scalable, and powerful architecture for building production ready React applications.
 
-3. install webpack and webpack-dev-server  
-    `npm install webpack webpack-dev-server --save`
+## Introduction
 
-4. install react and react-dom  
-    `npm install react react-dom --save`
+React is an excellent tool for building front-end applications. It has a diverse ecosystem with hundreds of great libraries for literally anything you might need. However, being forced to make so many choices can be overwhelming. It is also very flexible, you can write React applications in any way you like, but that flexibility comes with a cost. Since there is no pre-defined architecture that developers can follow, it often leads to a messy, inconsistent, and over-complicated codebase.
 
-5. install babel etc.  
-    `npm install babel-core babel-loader babel-preset-react babel-preset-es2015 --save`
+This repo attempts to present a way of creating React applications using some of the best tools in the ecosystem with a good project structure that scales very well. Based on my experience working with a lot of different codebases, this architecture turns out to be the most effective.
 
-6. add start scripts to package.json
-```javascript
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "webpack-dev-server --hot"
-    }
-```
+The goal here is to serve as a collection of resources and best practices when developing React applications. It is supposed to showcase solving most of the real-world problems of an application in a practical way and help developers write better applications.
 
-7. touch webpack.config.js
-```javascript
-    var config = {
-      entry: './main.js',
+Feel free to explore the sample app codebase to get the most value out of the repo.
 
-      output: {
-        path: './',
-        filename: 'index.js'
-      },
+## What makes a React application "bulletproof"?
 
-      devServer: {
-        inline: true,
-        port: 7777
-      },
+This repo doesn't aim to be a silver bullet for all React applications as there are many different use cases, but it tries to provide a solid foundation for building applications based on the following principles:
 
-      module: {
-        loaders: [
-          {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-              presets: ['es2015', 'react']
-            }
-          }
-        ]
-      }
-    }
+- Easy to get started with
+- Simple to understand and maintain
+- Uses the right tools for the job
+- Clean boundaries between different parts of the application
+- Everyone on the team is on the same page when it comes to how things are done
+- Security
+- Performance
+- Scalability in terms of codebase and team size
+- Issues detectable as early as possible
 
-    module.exports = config;
-```
+#### Disclaimer:
 
-8. touch index.html
-```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>react helloworld</title>
-      </head>
-      <body>
-        <div id="app"></div>
-        <script src="index.js" charset="utf-8"></script>
-      </body>
-    </html>
-```
+This is not supposed to be a template, boilerplate or a framework. It is an opinionated guide that shows how to do some things in a certain way. You are not forced to do everything exactly as it is shown here, decide what works best for you and your team and stay consistent with your style.
 
-9. touch App.jsx
-```javascript
-    import React from 'react';
+To get most out of it, do not get limited by the technologies used in this sample app, but rather focus on the principles and the concepts that are being presented here. The tools and libraries used here are just a suggestion, you can always replace them with something that fits your needs better. Sometimes, your project might require a slightly different approach, and that's totally fine.
 
-    class App extends React.Component {
-      render() {
-        return (
-          <div>simon, helloworld!!!</div>
-        );
-      }
-    }
+## Table Of Contents:
 
-    export default App;
-```
+- [💻 Application Overview](docs/application-overview.md)
+- [⚙️ Project Standards](docs/project-standards.md)
+- [🗄️ Project Structure](docs/project-structure.md)
+- [🧱 Components And Styling](docs/components-and-styling.md)
+- [📡 API Layer](docs/api-layer.md)
+- [🗃️ State Management](docs/state-management.md)
+- [🧪 Testing](docs/testing.md)
+- [⚠️ Error Handling](docs/error-handling.md)
+- [🔐 Security](docs/security.md)
+- [🚄 Performance](docs/performance.md)
+- [🌐 Deployment](docs/deployment.md)
+- [📚 Additional Resources](docs/additional-resources.md)
 
-10. touch main.js
-```javascript
-    import React from 'react';
-    import ReactDOM from 'react-dom';
+## Contributing
 
-    import App from './App.jsx';
+Contributions are always welcome! If you have any ideas, suggestions, fixes, feel free to contribute. You can do that by going through the following steps:
 
-    ReactDOM.render(<App />, document.getElementById('app'));
-```
+1. Clone this repo
+2. Create a branch: `git checkout -b your-feature`
+3. Make some changes
+4. Test your changes
+5. Push your branch and open a Pull Request
 
-11. start server  
-    `npm start`
+## License
 
-12. open browser: [http://localhost:7777](http://localhost:7777)
-
----
-if you clone this repository to local, just `npm install` and `npm start`.
+[MIT](/LICENSE)
