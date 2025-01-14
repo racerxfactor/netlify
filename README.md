@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-# Holly
-=======
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
@@ -111,16 +108,8 @@ define([
 
 ## rt-if
 This lets you add conditions to a subtree of HTML. If the condition evaluates to true, the subtree will be returned; otherwise, it will not be calculated. It is implemented as a ternary expression.
->>>>>>> Stashed changes
 
-A React implementation of [Davide Pacilio's](https://cruip.com/) free landing page template, [Holly](https://lukemcdonald.github.io/holly-react/).
 
-<<<<<<< Updated upstream
-# Getting Started
-
-- Run `npm install`
-- Run `npm run dev`
-=======
 ###### Sample:
 ```html
 <div rt-if="this.state.resultCode === 200">Success!</div>
@@ -682,4 +671,3 @@ Copyright (c) 2015 Wix. Licensed under the MIT license.
 [coveralls-url]: https://coveralls.io/r/wix/react-templates?branch=master
 [downloads-image]: http://img.shields.io/npm/dm/react-templates.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/react-templates
->>>>>>> Stashed changes
