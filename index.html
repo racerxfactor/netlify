@@ -1,97 +1,313 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>React Templates</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Light weight templates for React.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - UX Designer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="shortcut icon" href="https://facebook.github.io/react/favicon.ico">
-    <link href='//fonts.googleapis.com/css?family=Lato:100,300,700' rel='stylesheet' type='text/css'>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">-->
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    <link rel="stylesheet" href="playground/libs/codemirror-4.8/lib/codemirror.css"/>
-    <link rel="stylesheet" href="playground/libs/codemirror-4.8/theme/solarized.css"/>
-    <link rel="stylesheet" href="playground/libs/codemirror-4.8/addon/hint/show-hint.css">
-    <link rel="stylesheet" href="playground/libs/codemirror-4.8/addon/lint/lint.css">
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
 
-    <link rel="stylesheet" href="playground/css/playground.css"/>
-    <link rel="stylesheet" href="playground/css/home.css"/>
-    <!--<link rel="stylesheet" href="playground/dist/css/tidy.css"/>-->
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skill-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .skill-item:hover {
+            background: #e9ecef;
+        }
+
+        .skill-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<div class="container">
-
-    <div class="nav-main">
-        <div class="wrap">
-            <a class="nav-home" href="index.html">
-                <img class="nav-logo" src="https://wix.github.io/react-templates/img/logo-rt.svg" width="56" height="24" />
-                <span>React Templates</span>
-            </a>
-            <ul class="nav-site">
-                <li><a href="fiddle.html">Playground</a></li>
-                <li><a href="https://github.com/wix/react-templates#template-directives-and-syntax">docs</a></li>
-                <li><a href="https://github.com/wix/react-templates#installation">download</a></li>
-                <li><a href="https://github.com/wix/react-templates">github</a>
-            </ul>
+    <header>
+        <div class="container">
+            <h1>Alex Chen</h1>
+            <p class="subtitle">UX Designer & Problem Solver</p>
         </div>
-    </div>
-    <a href="https://github.com/wix/react-templates" target="_blank">
-        <img class="img-fork-github" src="img/github-fork-me.png" alt="Fork me on GitHub" />
-    </a>
+    </header>
 
-    <div class="hero">
-        <div class="wrap">
-            <div class="text">React Templates</div>
-            <div class="minitext">
-                Lightweight Templates for React
-            </div>
-            <div class="buttons-unit">
-                <a href="fiddle.html" class="button">Check Out the Playground</a>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a UX designer passionate about creating intuitive, user-centered experiences. With 5+ years of experience, I blend creativity with data-driven insights to solve complex design challenges. My approach focuses on understanding user needs and translating them into elegant, functional designs.</p>
             </div>
         </div>
-    </div>
-
-    <section class="content wrap">
-        <section class="love-list">
-            <ul>
-                <li>No runtime libraries. No magic. Simply precompile your way to clear React code.</li>
-                <li>Easy syntax that's similar to HTML, supported by most IDEs.</li>
-                <li>Clear separation of presentation and logic - almost zero HTML in component files.</li>
-                <li>Declarative coding ensures that the HTML that you write and the HTML you inspect look nearly identical.</li>
-                <li>Supports <a href="#amd">AMD</a>, <a href="#commonjs">CommonJS</a>, <a href="#es6">ES6</a>, Typescript and globals.</li>
-            </ul>
-        </section>
-        <section id="home-section" class="home-section">
-            <div id="loading">
-                Loading...
-            </div>
-        </section>
     </section>
 
-    <footer class="footer">
-        <span>Sponsored by </span> <a href="//wix.com" class="wf-white-logo"></a>
-    </footer>
-</div>
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🛒</div>
+                    <div class="project-content">
+                        <h3>E-Commerce Redesign</h3>
+                        <p>Reimagined the checkout flow for a major retailer, increasing conversion rates by 35% through simplified navigation and streamlined form design.</p>
+                    </div>
+                </div>
 
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="playground/dist/rt-main.browser.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
-<!--<script src="playground/home-main.js"></script>-->
-<script src="playground/dist/home.min.js"></script>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-58169705-1', 'auto');
-ga('send', 'pageview');
-</script>
+                <div class="project-card">
+                    <div class="project-image">💰</div>
+                    <div class="project-content">
+                        <h3>FinTech Mobile App</h3>
+                        <p>Designed an intuitive budgeting app that helps users track expenses and achieve financial goals. Featured in App Store's "Apps We Love".</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🏥</div>
+                    <div class="project-content">
+                        <h3>Healthcare Portal</h3>
+                        <p>Created a patient portal for a healthcare provider, improving appointment booking efficiency and patient satisfaction scores by 40%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Research</h3>
+                    <p>User interviews, usability testing, surveys, persona development</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Design</h3>
+                    <p>Figma, Sketch, Adobe XD, prototyping, wireframing</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Strategy</h3>
+                    <p>Information architecture, user flows, journey mapping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:alex@example.com">Email</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://dribbble.com" target="_blank">Dribbble</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
